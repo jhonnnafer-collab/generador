@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Texto Random</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="contenedor">
+        <h2>Generar palabras random de 20 caracteres</h2>
+        <div id="resultado" class="resultado">
+            Presiona el botón para generar texto
+        </div>
+
+        <button onclick="generarTexto()">Generar</button>
+    </div>
+
+
+
+      <script>
+        function generarTexto() {
+            const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let texto = "";
+
+     for (let i = 0; i < 20; i++) {
+                texto += caracteres.charAt(Math.floor(Math.random() * caracteres.length));}
+
+
+
+
+            document.getElementById("resultado").innerText = texto;
+        }
+    </script>
+
+</body>
+</html>
